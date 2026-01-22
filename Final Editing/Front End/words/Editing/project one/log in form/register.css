@@ -1,0 +1,130 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.register-container 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    background: linear-gradient(#82b0cfbb,#fff0f5);
+}
+.input-group input
+{
+    width: 80%;
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    background-color: #f1f1f1;
+    
+    border-radius: 10px;
+}
+.input-group
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 80%;             
+    height: 80%;
+    margin-bottom: 10px;
+}
+.input-group h2 {
+    margin-top: 24px; 
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+button {
+    width: 100px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  button:hover 
+  {
+    background: transparent;
+    border: 2px solid #333;
+    color: #333;
+    font-weight: 700;
+    padding:  8px;
+  }
+  #login
+  {
+    background: transparent;
+    color: #3895d3e1;
+    font-weight: 700;
+    padding: 8px 10px;
+    
+  }
+ #login:hover
+  {
+    color: rgba(189, 55, 160, 0.836);
+    border: none;
+  }
+
+.login
+{
+  background: transparent;
+  color: #3895d3e1;
+  font-weight: 700;
+}
+.login:hover
+{
+  color: rgba(189, 55, 160, 0.836);
+  border: none;
+}
+#reg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.alert
+{
+  color: #5a201f;
+  background-color: #eecaca;
+  border-color: #e8c9c8;
+  padding: .50rem 1rem;
+  border-radius: 8px;
+}
+.hide
+{
+  display: none;
+}
+.textright
+{
+  text-align: end;
+  font-size: 1.1rem;
+}
+.rtl {
+  font-size: 18px;
+  text-align: right; /* Align text to the right for Arabic */
+  direction: rtl; /* Set text direction to right-to-left */
+  /* margin: 10px 0; */
+  font-family: Arial, sans-serif;
+}
+.font
+{
+  font-size: 1.1rem;
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3TYPE</title>
+    <link rel="stylesheet" href="A3TYPE.css">
+    <link rel="icon" type="image/webpw" href="img/cropped_image (1).png">
+    <!-- <link rel="stylesheet" href="Bootstrap/CSS/bootstrap.min.css"> -->
+</head>
+<body>
+  <!-- my code -->
+  <audio id="mySound" src="music/happy-pop-2-185287.mp3" preload="auto"></audio>
+  <!-- end audio -->
+  <!-- Modal Structure -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe id="myIframe" src="log in form/login.html"  frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+  <div id="signUpModal" class="modal">
+    <div class="modal-content">
+      <span id="mySign" class="close">&times;</span>
+      <iframe id="myIframe2" src="log in form/register.html"  frameborder="0" ></iframe>
+    </div>
+  </div>
+</div>
+  <!-- End Modal Structure -->
+
+    
+    
+      <!-- left -->
+      <div class="logo">
+        <div class="image-div">
+          <!-- <img class="image-icon" src="img/logo_processed.webp" alt="">  -->
+          <img class="image-icon" src="img/logo_processed.webp" alt=""> 
+        </div>
+        <div class="user">
+          <div class="level"><span>1</span></div>
+          <div class="userName">userName</div>
+        </div>
+        <div class="progress-container hide">
+          <div class="progress-fill">
+            <span class="progress-label">0%</span>
+          </div>
+        </div>
+      </div>
+      <!-- About -->
+      <div class="mid" id="textContainer">
+    <div id="message">Game Over!</div>
+
+        <pre class="LOGO">A3TYPE 
+GAME</pre>
+      
+        <div class="stats-container" id="statsContainer"></div>
+
+         <div class="about-section hide">
+            <svg version="1.1" id="arrow" viewBox="0 0 476.213 476.213" >
+              <polygon points="476.213,223.107 57.427,223.107 151.82,128.713 130.607,107.5 0,238.106 130.607,368.714 151.82,347.5 
+              57.427,253.107 476.213,253.107 "/>
+            </svg>
+          <h2 class="aboutar">About This Game</h2>
+          <p class="aboutar">Welcome to our Typing Challenge! This game is designed to help improve your typing speed and accuracy. As you progress through different levels, you'll encounter a variety of words, phrases, and challenges that aim to develop your typing skills.</p>
+          <h3 class="aboutar">Key Features:</h3>
+          <ul>
+              <li><strong class="aboutar">New Game:</strong> 
+                <span class="aboutar">
+                  Start a new challenge to test and improve your typing speed.
+                </span>
+              </li>
+              <li><strong class="aboutar">Settings:</strong> 
+                <span class="aboutar">
+                  Customize game sound preferences.
+                </span>
+              </li>
+              <li>
+                <strong class="aboutar">My Stats:</strong>
+                  <span class="aboutar">
+                    Track your progress, including your fastest typing speed and accuracy rate.
+                  </span>
+                </li>
+              <li>
+                <strong class="aboutar">Load Your Text:</strong>
+                <span class="aboutar">
+                  Practice typing with your own text to improve your skills in real-life scenarios.
+                </span>
+              </li>
+          </ul>
+          <h3 class="aboutar">Why Typing Skills Matter:</h3>
+          <p class="aboutar">Typing is an essential skill in today's digital world, and improving your speed and accuracy can save time and boost productivity. This game makes learning fun, interactive, and engaging!</p>
+          <pre class="LOGO">A3TYPE 
+GAME</pre>
+        </div> 
+        <!-- <div class="about-section hide">
+          <svg version="1.1" id="arrow" viewBox="0 0 476.213 476.213">
+            <polygon points="476.213,223.107 57.427,223.107 151.82,128.713 130.607,107.5 0,238.106 130.607,368.714 151.82,347.5 
+            57.427,253.107 476.213,253.107" />
+          </svg>
+          <h2>About This Game</h2>
+          <p>Test and improve your typing speed and accuracy with our interactive Typing Challenge!</p>
+          <h3>Key Features:</h3>
+          <ul>
+            <li><strong>New Game:</strong> Start fresh challenges to boost your typing skills.</li>
+            <li><strong>Settings:</strong> Customize sound and game preferences.</li>
+            <li><strong>My Stats:</strong> Track your fastest speed and accuracy.</li>
+            <li><strong>Load Your Text:</strong> Practice with custom text for real-life scenarios.</li>
+          </ul>
+          <p>Improve your typing and save time—one keystroke at a time!</p>
+        </div> -->
+
+        <!-- About  --> 
+
+        <!--play  -->
+        <div class="pauseAndPlay">
+          <svg class="play hide" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64">
+          <polygon points="20,15 50,32 20,49" fill="#fff" />
+          </svg>
+          <svg class="pause hide" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64">
+            
+            <rect x="20" y="15" width="8" height="34" fill="#fff" />
+            <rect x="36" y="15" width="8" height="34" fill="#fff" />
+          </svg>
+        </div>
+        <!--play  -->
+
+        <canvas id="c" width="480" height="720"></canvas>
+            <button class="btn newgame" >New Game
+                <div class="star-1">
+                  <svg  viewBox="0 0 784.11 815.53">
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  
+                  <div class="star-2">
+                    <svg  viewBox="0 0 784.11 815.53">
+                      <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-3">
+                    <svg  viewBox="0 0 784.11 815.53">
+                      <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-4">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                      <defs></defs>
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-5">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-6">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+            </button>
+            <button class="btn setting">Settings
+              <div class="star-1">
+                <svg  viewBox="0 0 784.11 815.53"   >
+                  <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                </svg>
+              </div>
+              <div class="star-2">
+                    <svg  viewBox="0 0 784.11 815.53">
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-3">
+                    <svg  viewBox="0 0 784.11 815.53">
+                      <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-4">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                      <defs></defs>
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                      </svg>
+                    </div>
+                    <div class="star-5">
+                      <svg  viewBox="0 0 784.11 815.53" >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-6">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                      <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                </button>
+            <button class="btn">My Stats
+                <div class="star-1">
+                    <svg  viewBox="0 0 784.11 815.53"   >
+                      <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-2">
+                    <svg  viewBox="0 0 784.11 815.53">
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-3">
+                    <svg  viewBox="0 0 784.11 815.53">
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                      </svg>
+                    </div>
+                    <div class="star-4">
+                      <svg  viewBox="0 0 784.11 815.53" >
+                      <defs></defs>
+                      <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-5">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-6">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+            </button>
+            <button class="btn">About
+                <div class="star-1">
+                  <svg  viewBox="0 0 784.11 815.53"   >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-2">
+                    <svg  viewBox="0 0 784.11 815.53">
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                      </svg>
+                    </div>
+                  <div class="star-3">
+                    <svg  viewBox="0 0 784.11 815.53">
+                      <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-4">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                      <defs></defs>
+                      <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-5">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-6">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                      <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+            </button>
+            <button class="btn">Load Your text
+              <div class="star-1">
+                <svg  viewBox="0 0 784.11 815.53"   >
+                  <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                </svg>
+              </div>
+              
+              <div class="star-2">
+                <svg  viewBox="0 0 784.11 815.53">
+                  <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                </svg>
+              </div>
+              <div class="star-3">
+                <svg  viewBox="0 0 784.11 815.53">
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-4">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                      <defs></defs>
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+                  <div class="star-5">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                      </svg>
+                    </div>
+                  <div class="star-6">
+                    <svg  viewBox="0 0 784.11 815.53" >
+                        <path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path>
+                    </svg>
+                  </div>
+            </button>
+            <div class="stats-section hide">
+              <svg  version="1.1" id="arrow-stats" viewBox="0 0 476.213 476.213" >
+              <polygon points="476.213,223.107 57.427,223.107 151.82,128.713 130.607,107.5 0,238.106 130.607,368.714 151.82,347.5 
+              57.427,253.107 476.213,253.107 "/>
+              </svg>
+            </div>
+            <canvas class="wordStatsChart" ></canvas>
+            <!-- <div class="line"></div> -->
+      </div>
+    <!-- end of mid -->
+      
+      <!-- Right part -->
+      <div class="menu">
+        <button id="log">Log in</button>
+        <button id="logout" style="display: none;">Log out</button>
+              <!-- lang -->
+        <div class="language-inputs">
+          <label class="radio">
+            <input type="radio" name="radio" checked="" />
+            <span class="name EN" >EN</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="radio" />
+            <span class="name AR">AR</span>
+          </label>
+        
+        </div>
+              <!-- end lang -->
+      </div>
+      <div id="background"></div>
+      <canvas id="stars"></canvas>
+      <audio id="music" src="music/2.mp3" preload="auto" loop></audio>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+      <script src="A3TYPE.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <!-- <script src="Bootstrap/JS/bootstrap.bundle.min.js"></script> -->
+      
+</body>
+</html>
